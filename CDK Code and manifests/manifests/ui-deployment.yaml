@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: ui-deployment
+  namespace: risk
+  labels:
+    app: ui
+spec:
+  replicas: 2
+  selector: 
+    matchLabels: 
+      app: ui
+  template:
+    metadata:
+      labels:
+        app: ui
+    spec:
+      containers:
+      - name: ui
+        image: 137065650613.dkr.ecr.af-south-1.amazonaws.com/devopsstack-fe1f1ccac4-8ymnmmt3amab:latest # using latest only for demo
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80

@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: be-deployment2
+  namespace: risk
+  labels:
+    app: be
+spec:
+  replicas: 2
+  selector: 
+    matchLabels: 
+      app: be
+  template:
+    metadata:
+      labels:
+        app: be
+    spec:
+      containers:
+      - name: be
+        image: 137065650613.dkr.ecr.af-south-1.amazonaws.com/devopsstack-be6413ee17-d20ixylyjs8u:latest # using latest only for demo
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+        envFrom:
+          - secretRef:
+              name: apisecret
+        env:
+        - name: CONNECTION_STRING
+          value: server=$(HOST),1433;Initial Catalog=RegulatoryRisk;Database=RegulatoryRisk;User Id=sa;Password=$(PASSWORD);TrustServerCertificate=true
+            

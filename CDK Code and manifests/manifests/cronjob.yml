@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: my-cronjob2
+  namespace: risk
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: my-cron-container
+            image: 137065650613.dkr.ecr.af-south-1.amazonaws.com/cronjob:latest
+            envFrom:
+            - secretRef:
+                name: apisecret
+          restartPolicy: OnFailure

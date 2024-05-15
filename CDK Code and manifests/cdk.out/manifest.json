@@ -1,0 +1,891 @@
+{
+  "version": "33.0.0",
+  "artifacts": {
+    "clusterStac.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "clusterStac.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "clusterStac": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://137065650613/af-south-1",
+      "properties": {
+        "templateFile": "clusterStac.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::137065650613:role/cdk-hnb659fds-deploy-role-137065650613-af-south-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::137065650613:role/cdk-hnb659fds-cfn-exec-role-137065650613-af-south-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-137065650613-af-south-1/fdfc3f8bda0a26e015604382b91be96abeb7216d600ea34663e8139ffddd6798.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "clusterStac.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::137065650613:role/cdk-hnb659fds-lookup-role-137065650613-af-south-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "clusterStac.assets"
+      ],
+      "metadata": {
+        "/clusterStac/Vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Vpc8378EB38"
+          }
+        ],
+        "/clusterStac/Vpc/privateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcprivateSubnet1SubnetCEAD3716"
+          }
+        ],
+        "/clusterStac/Vpc/privateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcprivateSubnet1RouteTable1979EACB"
+          }
+        ],
+        "/clusterStac/Vpc/privateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcprivateSubnet1RouteTableAssociationEEBD93CE"
+          }
+        ],
+        "/clusterStac/Vpc/privateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcprivateSubnet1DefaultRouteB506891A"
+          }
+        ],
+        "/clusterStac/Vpc/privateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcprivateSubnet2Subnet2DE7549C"
+          }
+        ],
+        "/clusterStac/Vpc/privateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcprivateSubnet2RouteTable4D0FFC8C"
+          }
+        ],
+        "/clusterStac/Vpc/privateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcprivateSubnet2RouteTableAssociationB691E645"
+          }
+        ],
+        "/clusterStac/Vpc/privateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcprivateSubnet2DefaultRouteBAC3C1C3"
+          }
+        ],
+        "/clusterStac/Vpc/publicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcpublicSubnet1Subnet2BB74ED7"
+          }
+        ],
+        "/clusterStac/Vpc/publicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcpublicSubnet1RouteTable15C15F8E"
+          }
+        ],
+        "/clusterStac/Vpc/publicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcpublicSubnet1RouteTableAssociation4E83B6E4"
+          }
+        ],
+        "/clusterStac/Vpc/publicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcpublicSubnet1DefaultRouteB88F9E93"
+          }
+        ],
+        "/clusterStac/Vpc/publicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcpublicSubnet1EIP411541E6"
+          }
+        ],
+        "/clusterStac/Vpc/publicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcpublicSubnet1NATGatewayA036E8A6"
+          }
+        ],
+        "/clusterStac/Vpc/publicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcpublicSubnet2SubnetE34B022A"
+          }
+        ],
+        "/clusterStac/Vpc/publicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcpublicSubnet2RouteTableC5A6DF77"
+          }
+        ],
+        "/clusterStac/Vpc/publicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcpublicSubnet2RouteTableAssociationCCE257FF"
+          }
+        ],
+        "/clusterStac/Vpc/publicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcpublicSubnet2DefaultRoute732F0BEB"
+          }
+        ],
+        "/clusterStac/Vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcIGWD7BA715C"
+          }
+        ],
+        "/clusterStac/Vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcVPCGWBF912B6E"
+          }
+        ],
+        "/clusterStac/Vpc/RestrictDefaultSecurityGroupCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcRestrictDefaultSecurityGroupCustomResourceC73DA2BE"
+          }
+        ],
+        "/clusterStac/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0"
+          }
+        ],
+        "/clusterStac/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E"
+          }
+        ],
+        "/clusterStac/eksTriggered-Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eksTriggeredRoleDE88C676"
+          }
+        ],
+        "/clusterStac/eksTriggered-Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "eksTriggeredRoleDefaultPolicy4120C9AB"
+          }
+        ],
+        "/clusterStac/cluster-master-role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clustermasterroleCD184EDB"
+          }
+        ],
+        "/clusterStac/kubectl/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "kubectl290BBFC9"
+          }
+        ],
+        "/clusterStac/risk-cluster/KubectlHandlerRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterKubectlHandlerRoleD0A9DC58"
+          }
+        ],
+        "/clusterStac/risk-cluster/KubectlHandlerRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterKubectlHandlerRoleDefaultPolicy989F1BE3"
+          }
+        ],
+        "/clusterStac/risk-cluster/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterRoleCAAAE272"
+          }
+        ],
+        "/clusterStac/risk-cluster/ControlPlaneSecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterControlPlaneSecurityGroup8694B7EB"
+          }
+        ],
+        "/clusterStac/risk-cluster/Resource/CreationRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterCreationRoleAFC54A02"
+          }
+        ],
+        "/clusterStac/risk-cluster/Resource/CreationRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterCreationRoleDefaultPolicyCA569E94"
+          }
+        ],
+        "/clusterStac/risk-cluster/Resource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskcluster8F407EE2"
+          }
+        ],
+        "/clusterStac/risk-cluster/KubectlReadyBarrier": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterKubectlReadyBarrierEA53B47B"
+          }
+        ],
+        "/clusterStac/risk-cluster/HasEcrPublic": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterHasEcrPublicF175637F"
+          }
+        ],
+        "/clusterStac/risk-cluster/ClusterName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterClusterName440FC5FD"
+          }
+        ],
+        "/clusterStac/risk-cluster/AwsAuth/manifest/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterAwsAuthmanifest37E2C27D"
+          }
+        ],
+        "/clusterStac/risk-cluster/OpenIdConnectProvider/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterOpenIdConnectProvider8B6EF11A"
+          }
+        ],
+        "/clusterStac/risk-cluster/ConfigCommand": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterConfigCommandB0D2D51C"
+          }
+        ],
+        "/clusterStac/risk-cluster/GetTokenCommand": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterGetTokenCommand40F40731"
+          }
+        ],
+        "/clusterStac/risk-cluster/CoreDnsComputeTypePatch/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterCoreDnsComputeTypePatch6C415D2B"
+          }
+        ],
+        "/clusterStac/risk-cluster/fargate-profile-default/PodExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterfargateprofiledefaultPodExecutionRole0D315500"
+          }
+        ],
+        "/clusterStac/risk-cluster/fargate-profile-default/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterfargateprofiledefault98862ED4"
+          }
+        ],
+        "/clusterStac/risk-cluster/manifest-risk-namespace/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclustermanifestrisknamespace9A32D185"
+          }
+        ],
+        "/clusterStac/risk-cluster/fargate-profile-FargateRiskProfile/PodExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterfargateprofileFargateRiskProfilePodExecutionRole0CFD1218"
+          }
+        ],
+        "/clusterStac/risk-cluster/fargate-profile-FargateRiskProfile/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterfargateprofileFargateRiskProfile8E4412E4"
+          }
+        ],
+        "/clusterStac/risk-cluster/ServiceAccount/ConditionJson/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterServiceAccountConditionJson9CBDDBDD"
+          }
+        ],
+        "/clusterStac/risk-cluster/ServiceAccount/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterServiceAccountRole3366AE1A"
+          }
+        ],
+        "/clusterStac/risk-cluster/ServiceAccount/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterServiceAccountRoleDefaultPolicy3EBFBB62"
+          }
+        ],
+        "/clusterStac/risk-cluster/ServiceAccount/manifest-ServiceAccountServiceAccountResource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterServiceAccountmanifestServiceAccountServiceAccountResourceA08EDF85"
+          }
+        ],
+        "/clusterStac/risk-cluster/cronServiceAccount/ConditionJson/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclustercronServiceAccountConditionJson22F49AE1"
+          }
+        ],
+        "/clusterStac/risk-cluster/cronServiceAccount/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclustercronServiceAccountRole33C68C53"
+          }
+        ],
+        "/clusterStac/risk-cluster/cronServiceAccount/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclustercronServiceAccountRoleDefaultPolicyD09E378D"
+          }
+        ],
+        "/clusterStac/risk-cluster/cronServiceAccount/manifest-cronServiceAccountServiceAccountResource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclustercronServiceAccountmanifestcronServiceAccountServiceAccountResourceD591A1D8"
+          }
+        ],
+        "/clusterStac/risk-cluster/chart-ExternalSecretsOperator/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterchartExternalSecretsOperator63EFA6EB"
+          }
+        ],
+        "/clusterStac/risk-cluster/fargate-profile-FargateExternalSecretsProfile/PodExecutionRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterfargateprofileFargateExternalSecretsProfilePodExecutionRole86A4CAD1"
+          }
+        ],
+        "/clusterStac/risk-cluster/fargate-profile-FargateExternalSecretsProfile/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclusterfargateprofileFargateExternalSecretsProfile2508765E"
+          }
+        ],
+        "/clusterStac/risk-cluster/manifest-risk-secretstore/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclustermanifestrisksecretstore28D8F4CE"
+          }
+        ],
+        "/clusterStac/risk-cluster/manifest-risk-externalSecrets/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "riskclustermanifestriskexternalSecrets0B3F9C81"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/NodeProxyAgentLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "NodeProxyAgentLayer924C1971"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OnEventHandlerServiceRole15A26729"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/OnEventHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "OnEventHandler42BEBAE0"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IsCompleteHandlerServiceRole5810CC58"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/IsCompleteHandler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IsCompleteHandler7073F4DA"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRole9FF04296"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRoleDefaultPolicy48CD2133"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEvent83C1D0A7"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkisCompleteServiceRoleB1087139"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkisCompleteServiceRoleDefaultPolicy2E7140AC"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-isComplete/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkisComplete26D7B0CB"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonTimeoutServiceRole28643D26"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonTimeoutServiceRoleDefaultPolicy2688969F"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/framework-onTimeout/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonTimeout0B47CA38"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderwaiterstatemachineRole0C7159F9"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderwaiterstatemachineRoleDefaultPolicyD3C3DA1A"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/Provider/waiter-state-machine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Providerwaiterstatemachine5D4A9DF0"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/clusterStacawscdkawseksClusterResourceProviderOnEventHandlerServiceRoleEA634729Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clusterStacawscdkawseksClusterResourceProviderOnEventHandlerServiceRoleEA634729Arn"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/clusterStacawscdkawseksClusterResourceProviderIsCompleteHandlerServiceRoleD3A9244EArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clusterStacawscdkawseksClusterResourceProviderIsCompleteHandlerServiceRoleD3A9244EArn"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider/clusterStacawscdkawseksClusterResourceProviderframeworkonEvent89B13B65Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clusterStacawscdkawseksClusterResourceProviderframeworkonEvent89B13B65Arn"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStack/@aws-cdk--aws-eks.ClusterResourceProvider.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awscdkawseksClusterResourceProviderNestedStackawscdkawseksClusterResourceProviderNestedStackResource9827C454"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.KubectlProvider/Handler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Handler886CB40B"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.KubectlProvider/AwsCliLayer/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsCliLayerF44AAF94"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRole9FF04296"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEventServiceRoleDefaultPolicy48CD2133"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.KubectlProvider/Provider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ProviderframeworkonEvent83C1D0A7"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.KubectlProvider/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.KubectlProvider/clusterStacawscdkawseksKubectlProviderframeworkonEventFF004BB9Arn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clusterStacawscdkawseksKubectlProviderframeworkonEventFF004BB9Arn"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.KubectlProvider/reference-to-clusterStackubectl76896FAFRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoclusterStackubectl76896FAFRef"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.KubectlProvider/reference-to-clusterStacriskclusterKubectlHandlerRoleD95CE51AArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoclusterStacriskclusterKubectlHandlerRoleD95CE51AArn"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.KubectlProvider/reference-to-clusterStacVpcprivateSubnet1Subnet6A68CE62Ref": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoclusterStacVpcprivateSubnet1Subnet6A68CE62Ref"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.KubectlProvider/reference-to-clusterStacVpcprivateSubnet2SubnetEF3BA44FRef": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoclusterStacVpcprivateSubnet2SubnetEF3BA44FRef"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.KubectlProvider/reference-to-clusterStacriskcluster38D3929AClusterSecurityGroupId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "referencetoclusterStacriskcluster38D3929AClusterSecurityGroupId"
+          }
+        ],
+        "/clusterStac/@aws-cdk--aws-eks.KubectlProvider.NestedStack/@aws-cdk--aws-eks.KubectlProvider.NestedStackResource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "awscdkawseksKubectlProviderNestedStackawscdkawseksKubectlProviderNestedStackResourceA7AEBA6B"
+          }
+        ],
+        "/clusterStac/clusterStacriskclusterE761FFF3-AlbController/alb-sa/ConditionJson/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clusterStacriskclusterE761FFF3AlbControlleralbsaConditionJson24F6654B"
+          }
+        ],
+        "/clusterStac/clusterStacriskclusterE761FFF3-AlbController/alb-sa/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clusterStacriskclusterE761FFF3AlbControlleralbsaRole449C7998"
+          }
+        ],
+        "/clusterStac/clusterStacriskclusterE761FFF3-AlbController/alb-sa/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clusterStacriskclusterE761FFF3AlbControlleralbsaRoleDefaultPolicyA07DE741"
+          }
+        ],
+        "/clusterStac/clusterStacriskclusterE761FFF3-AlbController/alb-sa/manifest-alb-saServiceAccountResource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clusterStacriskclusterE761FFF3AlbControlleralbsamanifestalbsaServiceAccountResource7DC3A818"
+          }
+        ],
+        "/clusterStac/clusterStacriskclusterE761FFF3-AlbController/Resource/Resource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "clusterStacriskclusterE761FFF3AlbController4BD6F05C"
+          }
+        ],
+        "/clusterStac/Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomAWSCDKOpenIdConnectProviderCustomResourceProviderRole517FED65"
+          }
+        ],
+        "/clusterStac/Custom::AWSCDKOpenIdConnectProviderCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomAWSCDKOpenIdConnectProviderCustomResourceProviderHandlerF2C543E0"
+          }
+        ],
+        "/clusterStac/AWSCDKCfnUtilsProviderCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWSCDKCfnUtilsProviderCustomResourceProviderRoleFE0EE867"
+          }
+        ],
+        "/clusterStac/AWSCDKCfnUtilsProviderCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AWSCDKCfnUtilsProviderCustomResourceProviderHandlerCF82AA57"
+          }
+        ],
+        "/clusterStac/rdssecret/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rdssecret042ED20E"
+          }
+        ],
+        "/clusterStac/rdssecret/Attachment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "rdssecretAttachment241E46A8"
+          }
+        ],
+        "/clusterStac/RiskDBInstance/SubnetGroup/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RiskDBInstanceSubnetGroup889F52AF"
+          }
+        ],
+        "/clusterStac/RiskDBInstance/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RiskDBInstanceSecurityGroup07CAB655"
+          }
+        ],
+        "/clusterStac/RiskDBInstance/SecurityGroup/from clusterStacriskclusterClusterSecurityGroup48D4B84B:{IndirectPort}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RiskDBInstanceSecurityGroupfromclusterStacriskclusterClusterSecurityGroup48D4B84BIndirectPortB3A21EBD"
+          }
+        ],
+        "/clusterStac/RiskDBInstance/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "RiskDBInstanceBEE1E42A"
+          }
+        ],
+        "/clusterStac/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/clusterStac/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/clusterStac/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "clusterStac"
+    },
+    "notifyStac.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "notifyStac.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "notifyStac": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://137065650613/af-south-1",
+      "properties": {
+        "templateFile": "notifyStac.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::137065650613:role/cdk-hnb659fds-deploy-role-137065650613-af-south-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::137065650613:role/cdk-hnb659fds-cfn-exec-role-137065650613-af-south-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-137065650613-af-south-1/e0bcc7652a3f093642bcb9c6d5607979f75b2ec340f3c148a2dc54491303d93a.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "notifyStac.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::137065650613:role/cdk-hnb659fds-lookup-role-137065650613-af-south-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "notifyStac.assets"
+      ],
+      "metadata": {
+        "/notifyStac/DestinationBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DestinationBucket4BECDB47"
+          }
+        ],
+        "/notifyStac/DeadLetterQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DeadLetterQueue9F481546"
+          }
+        ],
+        "/notifyStac/HighRiskrQueue/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighRiskrQueueDB7EB93C"
+          }
+        ],
+        "/notifyStac/HighRiskrQueue/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighRiskrQueuePolicy0A8E8605"
+          }
+        ],
+        "/notifyStac/HighRiskrQueue/notifyStacHighRisktopic95DCA2C3/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighRiskrQueuenotifyStacHighRisktopic95DCA2C31A48DC2F"
+          }
+        ],
+        "/notifyStac/HighRisktopic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "HighRisktopicE4AD1946"
+          }
+        ],
+        "/notifyStac/bus/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "bus707364D1"
+          }
+        ],
+        "/notifyStac/PipeRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipeRole4D7B8476"
+          }
+        ],
+        "/notifyStac/PipeRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "PipeRoleDefaultPolicy84F54597"
+          }
+        ],
+        "/notifyStac/Pipe": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Pipe"
+          }
+        ],
+        "/notifyStac/SampleEvent-Rule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SampleEventRule136F589C"
+          }
+        ],
+        "/notifyStac/SameEventTriggered-Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SameEventTriggeredRole84AB995C"
+          }
+        ],
+        "/notifyStac/SameEventTriggered-Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SameEventTriggeredRoleDefaultPolicyBBCE362D"
+          }
+        ],
+        "/notifyStac/StateMachineRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StateMachineRole78EC082E"
+          }
+        ],
+        "/notifyStac/StateMachineRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StateMachineRoleDefaultPolicy433448B5"
+          }
+        ],
+        "/notifyStac/notifyTopicc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "notifyTopicc7094DA32"
+          }
+        ],
+        "/notifyStac/CloudwatchLogs/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CloudwatchLogs39890016"
+          }
+        ],
+        "/notifyStac/StateMachine/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "StateMachine2E01A3A5"
+          }
+        ],
+        "/notifyStac/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/notifyStac/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/notifyStac/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "notifyStac"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

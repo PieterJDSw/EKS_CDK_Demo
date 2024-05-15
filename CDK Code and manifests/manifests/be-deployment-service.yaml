@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: be-service
+  namespace: risk
+  labels:
+    service: beService
+spec: 
+  selector:
+    app: be
+  ports: 
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
+
+
